@@ -1,0 +1,120 @@
+.pest-home-licenses{
+    padding-bottom: 100px;    
+    overflow: hidden;
+
+    @include screen-xhl{
+        padding: 60px 0;
+    }
+
+    .container{
+        @include screen-sm{
+            padding: 0;
+        }
+    }
+    
+    .head{
+        @include flex(center, space-between);
+        margin-bottom: 50px;
+
+        @include screen-sm{
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        &__title{
+            @include h1;
+        }
+    }
+
+    .licenses__slider{
+        margin-bottom: 30px;
+
+        @include screen-sm{
+            margin-bottom: 60px;
+        }
+    }
+    .licenses__slide{
+        padding: 30px 20px 20px;
+        background-color: $color-base-light;
+        border-radius: 20px;
+        &:hover .licenses__slide-img{
+            transform: scale(1.05);           
+        }
+        
+        &-img{
+            // width: 285px;
+            width: calc(100% - 45px - 30/3);
+            // height: 400px;   
+            margin: 0 auto 20px;  
+            transition: 0.2s;    
+            
+            @include screen-sm{
+                width: calc(100% - 35px);
+            }
+        }
+        &-description{
+            @include small-text;
+            padding: 10px;
+            text-align: center;
+            background-color: $color-white;
+            border-radius: 20px;
+        }
+    }        
+    .licenses__pagination{
+        display: none;
+        margin-top: 10px;
+
+        @include screen-md{
+            display: flex;
+        }
+    }
+
+    .text{
+        position: relative;
+
+        &__content{
+            @include flex(center, unset, column);
+            width: 800px;
+            margin: 0 auto;
+            padding: 50px 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+
+            @include screen-xhl{
+                width: 100%;
+            }
+            @include screen-sm{
+                padding: 30px;
+            }
+        }
+
+        &__icon{
+            width: 64px;
+            height: 64px;                
+            margin-bottom: 20px;
+        }
+
+        &__title{
+            @include h2;
+            margin-bottom: 10px;
+        }
+
+        &__description{
+            @include body-text;
+        }
+
+        &__bg{
+            position: absolute;
+            top: 0;
+            width: 1170px;   
+            height: 100%; 
+            box-sizing: content-box;
+            
+            @include screen-xhl{
+                left: calc((1170px - 100%)/-2);
+                max-width: unset;
+            }
+        }
+    }
+}

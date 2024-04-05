@@ -1,0 +1,13 @@
+.container {
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box;
+
+    @include screen-xl{
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}

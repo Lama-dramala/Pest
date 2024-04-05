@@ -1,0 +1,22 @@
+.site-btn--fill{
+    @include site-btn;
+    padding: 19px 30px;
+    color: $color-white;
+    background: $grad-blue;
+    border-radius: 40px;
+    &:hover{
+        color: $color-blue;
+        background: transparent;
+    }
+}
+.site-btn--empty{
+    @include site-btn;
+    padding: 18px 20px;
+    color: $color-blue;
+    background: transparent;
+    border-radius: 35px;
+    &:hover{
+        color: $color-white;
+        background: $grad-blue;
+    }
+}

@@ -1,0 +1,84 @@
+.pest-footer{
+    position: relative;
+    padding: 45px 0 20px;
+    background-color: $color-base-light;
+
+    @include screen-md{
+        padding-top: 60px;
+    }
+
+    .bg-line1, .bg-line2{
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background-color: $color-white;
+        z-index: 1;
+    }
+    .bg-line1{
+        top: 10px;
+    }
+    .bg-line2{
+        top: 25px;
+    }
+
+    .container{
+        @include flex(center, space-between);
+        position: relative;
+        z-index: 2;
+
+        @include screen-md{
+            flex-direction: column;
+        }
+    }
+    
+    .logo{
+        width: 175px;
+        height: 50px;   
+
+        @include screen-md{
+            margin-bottom: 30px;
+        }
+    }
+
+    .footer-content{
+        @include flex(center);    
+        
+        @include screen-xl{
+            width: -webkit-fill-available;
+        }
+        @include screen-md{
+            flex-direction: column;
+            width: fit-content;
+        }
+    }    
+
+    .links{
+        @include flex(center);
+
+        @include screen-xl{
+            @include flex(start, unset, column);
+            margin: 0 auto;
+        }
+    }
+    .link{
+        @include flex(center);   
+        margin-right: 20px;
+        @include font(18px, 24px, 400);
+
+        @include screen-xl{
+            margin: 0 0 20px;
+        }
+
+        &__icon{
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+        }
+    }
+
+    .footer-btn{
+        @include screen-md{
+            width: 100%;
+        }
+    }
+}

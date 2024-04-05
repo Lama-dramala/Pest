@@ -1,0 +1,158 @@
+.pest-home-hero{
+    position: relative;
+    color: $color-white;
+    height: 800px;
+    padding-top: 440px;
+    text-align: center;
+    @include screen-xl{
+        height: unset;
+        padding-bottom: 50px;
+    }
+    @include screen-sm{
+        padding-top: 313px;
+    }
+
+    .container{
+        @include flex(center, unset, column);
+        position: relative;
+        z-index: 3;
+    }
+    .title{
+        @include big-title;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 22px;
+
+        @include screen-xl{
+            @include h1;
+        }
+        @include screen-md{
+            @include font(28px, 34.13px, 500);
+        }
+        @include screen-sm{
+            max-width: calc(100% - 40px);
+            margin-bottom: 11px;            
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: -32px;
+            left: -26px;
+            width: calc(100% + 26px + 38px);
+            height: calc(100% + 32px + 10px);
+            background: rgba($color: $color-blue-2, $alpha: .9);
+            clip-path: polygon(0 25px, calc(100% - 30px) 0, 100% 100%, 10px 100%);
+            transform: translateZ(0);
+            backdrop-filter: blur(5px);
+
+            @include screen-xl{
+                left: -46px;
+                width: calc(100% + 46px + 38px);
+            }
+            @include screen-sm{
+                top: -20px;
+                left: -20px;
+                width: calc(100% + 40px);
+                height: calc(100% + 20px + 5px);
+                clip-path: polygon(0 15px, calc(100% - 30px) 0, 100% 100%, 10px 100%);
+            }
+        }
+    }
+    .sub-title{
+        @include h2;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 42px;
+
+        @include screen-md{
+            @include font(24px, 29.26px, 500);
+        }
+        @include screen-sm{
+            max-width: calc(100% - 30px);
+            margin-bottom: 26px;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: -13px;
+            left: -28px;
+            width: calc(100% + 2 * 28px);
+            height: calc(100% + 2 * 13px);
+            background: rgba($color: $color-red, $alpha: .9);
+            clip-path: polygon(0 0, 100% 0, 98% 100%, 3% 100%);
+            transform: translateZ(0);
+            backdrop-filter: blur(5px);
+            @include screen-sm{
+                top: -6px;
+                left: -15px;
+                width: calc(100% + 2 * 15px);
+                height: calc(100% + 2 * 6px);
+            }
+        }
+    }    
+
+    .button{
+        &:hover{
+            background: radial-gradient( $color-white 0%, $color-white 100%);
+        }
+    }
+
+    .bg-people{
+        position: absolute;
+        top: -440px;
+        z-index: -1;
+        height: 800px;
+
+        @include screen-xl{
+            top: -400px;
+            height: 450px;
+        }
+        @include screen-md{
+            top: -300px;
+            height: 350px;
+        }
+        @include screen-sm{
+            top: -193px;
+            height: 210px;
+        }
+    }
+    .bg-backlight{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-arrow-left{
+        position: absolute;
+        top: 190px;
+        left: 225px;
+        z-index: 2;
+        width: 262.36px;
+        height: 356.86px;
+
+        @media(max-width:1500px) {
+            display: none;
+        }
+    }
+    .bg-arrow-right{
+        position: absolute;
+        top: 176px;
+        right: 0;
+        z-index: 4;
+        width: 465px;
+        height: 514px;
+
+        @media(max-width:1500px) {
+            display: none;
+        }
+    }
+}
+

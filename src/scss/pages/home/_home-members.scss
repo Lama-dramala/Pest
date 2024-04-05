@@ -1,0 +1,164 @@
+.pest-home-members{
+    padding: 50px 0 110px;
+    background-color: $color-base-light;
+    position: relative;
+    &::after{
+        content: "";
+        height: 250px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='1920' height='250' viewBox='0 0 1920 250' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 101.256C0 101.256 271.667 237.97 457.262 226.907C642.857 215.843 754.037 170.243 957.971 193.043C1161.9 215.843 1753.41 158.32 1920 0V266.378H0V101.256Z' fill='%23FDFDFF'/%3E%3C/svg%3E");
+        background-position: center;
+        background-size: cover;
+    }
+
+    @include screen-sm{
+        padding: 30px 0 60px;
+    }
+
+    .container{
+        position: relative;
+        z-index: 2;
+    }
+
+    .head{
+        @include flex(center, space-between);
+        margin-bottom: 50px;
+
+        @media(max-width:850px) {
+            @include flex(start, unset, column);
+        }
+        @include screen-sm{
+            margin-bottom: 30px;
+        }
+
+        &__title{
+            @include h1;
+
+            @media(max-width:850px){
+                margin-bottom: 20px;
+            }
+        }
+        &__right{
+            @include flex(center);
+        }
+        &__description{
+            @include h4;
+            width: 316px;
+            margin-right: 30px;
+            color: $color-blue;
+
+            @media(max-width:850px){
+                width: unset;
+                margin-right: 0;
+            }
+        }   
+        &__btn{
+            @include screen-xhl{
+                display: none;
+            }
+        }     
+    }
+
+    .members__slider{
+        padding-top: 20px;
+        margin-bottom: 50px;
+
+        @include screen-sm{
+            margin-bottom: 30px;
+        }
+    }
+    .member{
+        // width: 270px;
+        min-height: 417px;
+        padding: 0 30px 18px;
+        background-color: $color-white;
+        border: 1px solid $color-grey;
+        border-radius: 20px;
+        &:hover{
+            background: $grad-blue-light;
+        }
+
+        &__img{
+            width: 180px;
+            height: 180px; 
+            margin: 0 auto 10px;           
+            transform: translateY(-20px);
+        }
+
+        &__title{
+            @include h5;
+        }
+
+        &__location{
+            display: flex;
+            min-height: 54px;
+            margin: 15px 0;
+            @include small-text;
+
+            &-icon{
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+                flex-shrink: 0;
+            }
+        }
+
+        &__description{
+            padding-top: 15px;
+            @include small-text;
+            border-top: 1px solid $color-grey;
+        }
+    }
+    .members__pagination{
+        display: none;
+        margin-top: 10px;
+
+        @include screen-sm{
+            display: flex;
+        }
+    }
+
+    .mobile__btn{
+        display: none;
+        margin: 0 auto 30px;
+        @include screen-xhl{
+            display: block;
+        }
+        @include screen-sm{
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    .members-control{
+        padding-top: 30px;
+        border-top: 1px solid $color-grey;
+
+        @media(max-width: 900px) {
+            display: none;
+        }
+
+        &__btn{
+            position: relative;
+            display: flex;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        &__icon{
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 44px;
+            height: 44px;
+        }
+    }
+}
+
+@media(max-width:1920px) {
+    .pest-home-members::after{
+        background-size: auto;
+    }
+}

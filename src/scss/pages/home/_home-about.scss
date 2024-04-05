@@ -1,0 +1,181 @@
+.pest-home-about {
+    padding: 100px 0 125px;
+
+    @include screen-xl{
+        padding: 60px 0 132px;
+    }
+
+    .container{
+        position: relative;
+    }
+
+    .title{
+        @include big-title;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include screen-md{
+            @include font(50px, 70px, 500);
+        }
+        @include screen-sm{
+            @include font(28px, 34px, 500);
+        }
+    }
+    
+    .statistics{
+        @include flex(unset, space-between);
+        margin-top: 210px;
+        position: relative;
+        z-index: 2;
+
+        @include screen-xl{
+            @include grid(repeat(2, 1fr), 30px);
+            width: fit-content;
+            margin: 228px auto 0;
+        }
+        @include screen-md{
+            @include grid(repeat(1, 1fr), 20px);
+        }
+
+        &__item{
+            @include flex(unset, space-between, column);
+            width: 270px;
+            height: 270px;
+            padding: 30px;
+            border-radius: 22px;
+            background-color: $card-bg;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+            &:nth-child(even){
+                margin-top: 70px;
+                @include screen-xl{
+                    margin-top: 0;
+                }
+            }
+
+            @include screen-md{                
+                @include flex(center, start, row-reverse);
+                width: 400px;
+                height: unset;
+                padding: 20px 10px;
+            }
+            @include screen-sm{
+                width: 300px;
+            }
+        }
+        &__title{
+            @include h3;
+        }
+        &__icon{
+            width: 70px;
+            height: 70px;
+
+            @include screen-md{
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+                flex: none;
+            }
+        }
+    }
+
+    .bg-rat{
+        position: absolute;
+        top: 46px;
+        left: 454px;
+        width: 315px;
+        height: 344px;
+        @include screen-xl{
+            left: calc(50% - (300px/2));
+            width: 300px;
+            height: unset;
+        }
+        @include screen-md{    
+            left: calc(50% - (200px/2));
+            width: 200px;        
+        }
+    }
+    .bg-arrow{
+        position: absolute;
+        top: 100px;
+        left: -95px;  
+        width: 713px;
+        height: 754px;  
+
+        @include screen-xl{    
+            top: unset;
+            bottom: -72px;
+            left: calc(50% - (550px/2));
+            width: 550px;
+            height: unset;        
+        }  
+        @include screen-md{   
+            left: calc(50% - (300px/2));
+            width: 300px;         
+        }        
+    }
+    .bg-target1{
+        position: absolute;
+        top: 63px;
+        left: -26px; 
+        width: 170px;
+        height: 170px;  
+
+        @include screen-xl{  
+            top: 200px;
+            left: unset;
+            right: 50px;
+            width: 126px;
+            height: 126px;           
+        }   
+        @include screen-md{  
+            width: 65px; 
+            height: 65px;             
+        }   
+        @include screen-sm{
+            top: 185px;
+            right: 33.6px; 
+        }           
+    }
+    .bg-target2{
+        position: absolute;
+        bottom: -142px;
+        left: 411px; 
+        width: 126px;
+        height: 126px;  
+
+        @include screen-xl{ 
+            top: 80px;
+            left: unset;   
+            right: 50px;            
+        }   
+        @include screen-md{  
+            width: 75px; 
+            height: 75px;             
+        }     
+        @include screen-sm{
+            top: 72px;
+            right: 32px; 
+        }  
+    }
+    .bg-target3{
+        position: absolute;
+        top: 134px;
+        right: 101px; 
+        width: 126px;
+        height: 126px;  
+
+        @include screen-xl{      
+            top: 70px;
+            right: unset;   
+            left: 50px;          
+        }   
+        @include screen-md{    
+            width: 60px; 
+            height: 60px;           
+        }     
+        @include screen-sm{
+            top: 67.5px;
+            left: 13px; 
+        }  
+    }
+}

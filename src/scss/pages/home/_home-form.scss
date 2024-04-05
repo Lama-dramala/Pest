@@ -1,0 +1,122 @@
+.pest-home-form{
+    padding: 38px 0 100px;
+
+    @include screen-sm{
+        padding: 0;
+    }
+
+    .container{
+        @include screen-sm{
+            padding: 0;
+        }
+    }
+
+    .wrapper{
+        position: relative;
+        width: calc(100% - 30px);
+        padding: 50px 60px;
+        color: $color-white;
+        background: $grad-dark-blue;
+        border-radius: 50px;
+
+        @include screen-xl{
+            width: 100%;
+        }
+        @include screen-md{
+            padding: 30px 30px 330px;
+        }
+        @include screen-sm{
+            border-radius: 0;
+        }
+    }
+    .people-bg{
+        position: absolute;
+        bottom: 0;
+        right: -30px;
+        width: 707px;
+        width: 62%;
+
+        @include screen-xhl{
+            right: 0;
+            width: 50%;
+        }
+        @include screen-md{
+            width: 300px;
+            right: calc(50% - 300px/2);
+        }
+    }
+    .content{
+        width: 410px;
+
+        @include screen-xl{
+            width: 380px;
+        }
+        @include screen-xhl{
+            width: 300px;
+        }
+        @include screen-md{
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .title{
+        @include big-title;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+
+        @include screen-xhl{
+            @include font(50px, 70px, 500);
+            text-transform: none;
+        }
+        @include screen-sm{
+            margin-bottom: none;
+        }
+        
+        span {
+            display: block;
+            position: relative;
+            max-width: max-content;
+            margin-top: 18px;
+
+            @include screen-md{
+                margin: 6px auto 0;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: calc(100% + 2 * 30px);
+                height: calc(100% + 2 * 18px);
+                top: -18px;
+                left: -30px;
+                background-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 387 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M264.674 3C399.807 13.3283 463.261 124.662 217.597 126.962C-24.5211 129.229 -60.5105 30.2487 103.281 16.9395C248.017 5.1789 324.205 31.4207 324.205 31.4207' stroke='%2355C1E1' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+    .description{
+        @include h4;
+        margin-bottom: 30px;
+
+        @include screen-sm{
+            @include font(20px, 32px, 500);
+        }
+    }
+
+    .form-field{
+        margin-bottom: 15px;
+    }
+    .submit-btn{
+        width: 240px;
+        &:hover{
+            background: radial-gradient( $color-white 0%, $color-white 100%);
+        }
+
+        @include screen-md{
+            width: 100%;
+        }
+    }
+}

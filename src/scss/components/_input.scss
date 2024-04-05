@@ -1,0 +1,46 @@
+.form-field {
+    position: relative;
+
+    // display: inline-block;
+    &__input {
+        padding-left: 30px;
+        box-sizing: border-box;
+        display: block;
+        border-radius: 30px;
+        height: 60px;
+        width: 100%;
+        background: transparent;
+        border: 1px solid $color-blue-2;
+        color: $color-grey-palceholder;
+        padding: 18px 19px 18px 50px;
+        font-size: 18px;
+        line-height: 21.94;
+        transition: .3s;
+        appearance: none;
+        // text-align: center;
+
+    }
+
+    &__input::placeholder {
+        color: $color-grey-palceholder;
+        font-size: 18px;
+        line-height: 21.94;
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        /* Встановлюємо положення іконки */
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+    }
+
+    .error {
+        .form-field__input {
+            border-color: $color-red;
+        }
+    }
+
+}

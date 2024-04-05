@@ -1,0 +1,86 @@
+.pest-header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;    
+    padding-top: 20px;
+    transition: 0.2s;
+    &.open{
+        background-color: #fffffff6;
+    }
+    @include screen-md{
+        padding: 15px 0;
+        position: fixed;
+        background-color: #fffffff6;
+    }
+
+    .container{
+        @include flex(center, space-between);   
+    }
+    
+    .logo{
+        width: 175px;
+        height: 50px;        
+    }
+
+    .header-content{
+        @include flex(center);
+
+        @include screen-md{
+            display: none;
+        }
+    }
+    .link{
+        @include flex(center);
+        
+        &__icon{
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+    }
+    .call-btn{
+        margin: 0 30px;
+    }
+    .lang-btn{
+        @include h5;
+        background-color: unset;
+        cursor: pointer;
+    }    
+
+    .menu-btn{
+        display: none;
+        width: 60px;
+        height: 60px;
+        background-color: $color-blue;
+        border-radius: 50%;
+        transition: 0.2s;
+
+        @include screen-md{
+            @include flex(center, center, column)
+        }
+
+        &__line{
+            width: 36px;
+            height: 1px;
+            margin-bottom: 10px;
+            background-color: #ffffff;
+            transition: 0.2s;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &.open .menu-btn{
+        background-color: $color-red;
+
+        &__line{
+            transform: rotate(45deg);
+            margin-bottom: 0;
+            &:last-child{                
+                transform: rotate(-45deg);;
+            }
+        }
+    }
+}

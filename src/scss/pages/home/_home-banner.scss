@@ -1,0 +1,129 @@
+.pest-home-banner{
+    padding: 130px 0 147px;
+
+    @media(max-width:830px){
+        padding: 0;
+        overflow: hidden;
+    }
+    @include screen-sm{
+        background: $color-black-light;
+    }
+
+    .banner{
+        position: relative;
+        z-index: 1;
+        // width: 1140px;
+        width: calc(100% - 30px);
+        padding: 50px;
+        color: $color-white;
+        background: $color-black-light;
+        border-radius: 50px;
+
+        @include screen-xl{
+            width: 100%;
+        }
+        @media(max-width:830px) {
+            padding-bottom: 375px;
+        }
+        @include screen-sm{
+            padding: 30px 0 375px;
+        }
+
+        &__content{
+            position: relative;
+            z-index: 5;
+        }
+        &__bg-man{
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 787px;  
+            // width: 69%;  
+            // height: 656px;              
+            @include screen-xl{
+                top: 130px;
+                right: 0;
+                width: 400px;
+            }
+            @media(max-width:830px){
+                top: unset;
+                right: calc(50% - 200px);
+                bottom: -120px;
+                z-index: 4;
+            }
+            @include screen-sm{
+                width: 320px;
+                bottom: -90px;
+                right: calc(50% - 150px);
+            }
+        }
+        &__bg-price{
+            position: absolute;
+            bottom: -47px;
+            right: 179px;
+            width: 335px;  
+            // width: 29%;     
+            // height: 335px;             
+            @include screen-xl{
+                bottom: 133px;
+                right: 112px;
+                width: 175px;  
+            } 
+            @media(max-width:830px){
+                width: 238px;
+                bottom: 100px;
+                right: calc(50% - 120px);
+            }
+        }
+
+        &__title{
+            @include big-title;
+            margin-bottom: 30px;
+
+            @include screen-sm{
+                margin-bottom: 20px;
+            }
+        }
+
+        .list{
+            margin-bottom: 30px;
+
+            @include screen-sm{
+                margin-bottom: 20px;
+            }
+
+            &__item{
+                @include flex(center);
+                margin-bottom: 20px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                @include screen-sm{
+                    margin-bottom: 10px;
+                }
+
+                &-title{
+                    @include h3;
+                }
+
+                &-icon{
+                    width: 64px;
+                    height: 64px;
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        &__btn{
+            padding: 19px 38px;
+            &:hover{
+                background: radial-gradient( $color-white 0%, $color-white 100%);
+            }
+
+            @include screen-sm{
+                width: 100%;
+            }
+        }
+    }
+}
